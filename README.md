@@ -40,3 +40,47 @@ public class Solut {
         }
         }
     }
+    
+## Kullanici Girisi
+
+import java.io.*;
+import java.util.*;
+
+public class Solut {
+
+    public static void main(String[] args) {
+        String username,password, newpass;
+        int select;
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("UserID: ");
+        username = s.nextLine();
+
+        System.out.print("Password: ");
+        password = s.nextLine();
+
+        if(username.equals("patika") && password.equals("java123")){
+            System.out.println("Welcome !");
+        }
+        else {
+            System.out.println("Username or Password is wrong. Do you want to reset your password ? 1=y, 2=n");
+            select = s.nextInt();
+            if(select == 2){
+                System.out.println("Your access has been damped out.");
+            }
+            else if(select == 1){
+                System.out.println("Write your new password: ");
+                newpass = s.nextLine();
+                if(newpass.equals("java123") || newpass.equals(password)){
+                    System.out.println("New password cannot be same with the old one. Please try again.");
+                }
+                else {
+                    System.out.println("Your password has been changed.");
+                }
+            }
+            else {
+                System.out.println("Your choice is wrong. Please try again.");
+            }
+        }
+    }
+}

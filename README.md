@@ -148,3 +148,24 @@ public class Solut {
         }
     }
 }
+## Sayilari Kucukten Buyuge Siralama
+import java.io.*;
+import java.util.*;
+import java.util.Arrays;
+
+public class Solut {
+
+    public static void main(String[] args) {
+        int a,b,c;
+        Scanner s = new Scanner(System.in);
+        a = s.nextInt();
+        b = s.nextInt();
+        c = s.nextInt();
+        int[] numbers = new int[3];
+        numbers[0] =a;
+        numbers[1] =b;
+        numbers[2] =c;
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
+    }
+}

@@ -115,3 +115,36 @@ public class Solut {
         }
     }
 }
+## Hava Sicakligina Gore Etkinlik
+import java.io.*;
+import java.util.*;
+
+public class Solut {
+
+    public static void main(String[] args) {
+        int temp;
+        Scanner s = new Scanner(System.in);
+        temp = s.nextInt();
+        if(temp<5){
+            System.out.println("Kayaga git");
+        }
+        if(temp == 5){
+            System.out.println("Kayaga veya Sinemaya git");
+        }
+        if(5<temp && temp<15){
+            System.out.println("Sinemaya git");
+        }
+        if(temp == 15){
+            System.out.println("Pikniğe veya Sinemaya git");
+        }
+        if(15<temp && temp<25){
+            System.out.println("Pikniğe git");
+        }
+        if(temp == 25){
+            System.out.println("Pikniğe veya Yüzmeye git");
+        }
+        if(25<temp){
+            System.out.println("Yüzmeye git");
+        }
+    }
+}

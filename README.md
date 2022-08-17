@@ -84,3 +84,34 @@ public class Solut {
         }
     }
 }
+
+## Sinif Gecme
+import java.io.*;
+import java.util.*;
+
+public class Solut {
+
+    public static void main(String[] args) {
+        int mat,fizik,turkce,kimya;
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Matematik Notunuz");
+        mat = s.nextInt();
+        System.out.println("Fizik Notunuz");
+        fizik = s.nextInt();
+        System.out.println("Turkce Notunuz");
+        turkce = s.nextInt();
+        System.out.println("Kimya Notunuz");
+        kimya = s.nextInt();
+
+        double average = (mat+fizik+turkce+kimya)/4;
+        if(average<55){
+            System.out.println("Sınıfta Kaldın");
+        }
+        else{
+            System.out.println("Geçtin");
+            System.out.println("Ortalamanız: "+average);
+        }
+    }
+}

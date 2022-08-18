@@ -1,7 +1,8 @@
-# Patika.dev-Java101-Kosullu-Ifadeler-ve-Kod-Bloklari-Pratikleri
-Patika.dev'in Java 101 derslerinde "Kosullu Ifadeler ve Kod Bloklari" bolumunun pratik odevleri
+Patika.dev'in Java 101 bolumunun pratik odevleri
 
 www.patika.dev
+
+# Patika.dev-Java101-Kosullu-Ifadeler-ve-Kod-Bloklari-Pratikleri
 
 ## Hesap Makinesi
 
@@ -224,5 +225,29 @@ public class Giris
                 System.out.println("Oğlak Burcu");
             }
         }
+    }
+}
+# Patika.dev-Java101-Metotlar-Pratikleri
+## Palindrom Sayilar
+import java.util.Scanner;
+
+public class Java101Practices {
+    static boolean isPalindrom(int number){
+        int temp = number, reverseNumber = 0, lastNumber;
+        while (temp != 0){
+            lastNumber = temp%10;
+            reverseNumber = reverseNumber*10 + lastNumber;
+            temp /= 10;
+        }
+        if(number == reverseNumber){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println(isPalindrom(s.nextInt()));
     }
 }

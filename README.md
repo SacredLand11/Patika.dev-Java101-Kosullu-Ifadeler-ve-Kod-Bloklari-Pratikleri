@@ -404,6 +404,28 @@ public class Java101Practices {
     }
 }
 
+## Harmonik Pratik
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+       Scanner s = new Scanner(System.in);
+       System.out.print("Sayi giriniz: ");
+       int num = s.nextInt();
+       if(num <= 0){
+           System.out.println("Lutfen 1'den daha buyuk bir sayi giriniz.");
+       }
+       else {
+           float hamSum = 0.0f;
+           for(int i=1;i<=num;i++){
+               hamSum += 1.0f/i;
+           }
+           System.out.println(hamSum);
+       }
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

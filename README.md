@@ -512,6 +512,26 @@ public class Java101Practices {
 }
 }
 
+## Asal Sayi Odev
+
+public class Java101Practices {
+    public static void main(String[] args) {
+        for(int i = 2; i<100;i++){
+            boolean checkAsal = true;
+            for(int j=i; j>1;j--){
+                if(j<i){
+                    if(i%j==0){
+                        checkAsal = false;
+                    }
+                }
+            }
+            if(checkAsal){
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

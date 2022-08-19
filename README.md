@@ -319,6 +319,41 @@ public class Java101Practices {
     }
 }
 
+## Olasilik Kombinasyonlari
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int n, r, nProb = 1, olasilik = 1, ProbOlasilik = 1;
+        System.out.print("Kume sayisini giriniz ");
+        n = s.nextInt();
+        System.out.print("Kombinasyon degerini giriniz : ");
+        r = s.nextInt();
+
+        for(int i =1; i <= n; i++){
+
+            nProb *= i;
+        }
+
+        for(int j =1; j <= r; j++){
+
+            olasilik *= j;
+
+        }
+
+        for(int t = 1; t <= (n - r); t++){
+
+            ProbOlasilik *= t;
+
+        }
+
+        System.out.println("Kombinasyon hesabi : "  + nProb / (olasilik * ProbOlasilik));
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

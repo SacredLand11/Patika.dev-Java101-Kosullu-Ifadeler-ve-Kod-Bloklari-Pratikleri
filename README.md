@@ -150,6 +150,7 @@ public class Solut {
     }
 }
 ## Sayilari Kucukten Buyuge Siralama
+
 import java.io.*;
 import java.util.*;
 import java.util.Arrays;
@@ -171,6 +172,7 @@ public class Solut {
     }
 }
 ## Burç Bulan Program
+
 import java.util.Scanner;
 import java.io.*;
 import java.util.*;
@@ -227,8 +229,45 @@ public class Giris
         }
     }
 }
+# Patika.dev-Java101-Donguler-Pratikleri
+## Girilen Sayıya Kadar Olan Çift Sayıları Bulan Program
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    static boolean isPalindrom(int number){
+        int temp = number, reverseNumber = 0, lastNumber;
+        while (temp != 0){
+            lastNumber = temp%10;
+            reverseNumber = reverseNumber*10 + lastNumber;
+            temp /= 10;
+        }
+        if(number == reverseNumber){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public static void main(String[] args) {
+        int k,nextNum,leng = 0,ave = 0;
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Kaç sayı girilecek: ");
+        k = s.nextInt();
+        for (int i=0; i<k;i++){
+            nextNum = s.nextInt();
+            if(nextNum%3==0 && nextNum%4==0){
+                ave += nextNum;
+                leng++;
+            }
+        }
+        System.out.println(ave/leng);
+    }
+}
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
+
 import java.util.Scanner;
 
 public class Java101Practices {

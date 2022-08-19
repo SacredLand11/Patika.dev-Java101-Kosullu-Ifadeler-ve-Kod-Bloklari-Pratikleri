@@ -354,6 +354,37 @@ public class Java101Practices {
     }
 }
 
+## For Ile Us Bulma Pratik
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n,k,firstnum;
+        System.out.print("Ustu alinacak sayi: ");
+        k = s.nextInt();
+        firstnum = k;
+        System.out.print("Ust degeri: ");
+        n = s.nextInt();
+        if(n==0){
+            System.out.println(1);
+        }
+        else if(n<0){
+            for(int i = 1; i<(n*-1);i++){
+                k *= firstnum;
+            }
+            System.out.println("1/"+k);
+        }
+        else {
+            for(int i = 1; i< n; i++){
+                k *= firstnum;
+            }
+            System.out.println(k);
+        }
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

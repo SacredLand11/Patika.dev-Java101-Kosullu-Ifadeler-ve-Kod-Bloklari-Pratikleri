@@ -290,6 +290,35 @@ public class Java101Practices {
     }
 }
 
+## Java döngüler ile girilen sayıya kadar olan 4 ve 5'in kuvvetlerini ekrana yazdıran programı yazıyoruz.
+
+import java.util.Scanner;
+
+public class Java101Practices {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Bir sayi giriniz: ");
+        int num = s.nextInt();
+        int fourStack = 0,fiveStack = 0;
+        boolean checkBool = true;
+        for(int i=0; checkBool;i++){
+            if(num%4==0){
+                num /=4;
+                fourStack++;
+            } else if (num%5 == 0) {
+                num /=5;
+                fiveStack++;
+            }
+            else {
+                System.out.println("4'un kuvveti: "+fourStack);
+                System.out.println("5'in kuvveti: "+fiveStack);
+                break;
+            }
+        }
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

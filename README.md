@@ -385,6 +385,25 @@ public class Java101Practices {
     }
 }
 
+## Sayilarin Basamaklarinin Toplami Pratik
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+       Scanner s = new Scanner(System.in);
+       System.out.print("Sayi giriniz: ");
+       int num = s.nextInt();
+       int tempNumber = num;
+       int basNumber = 0;
+        while (tempNumber != 0) {
+            basNumber += tempNumber%10;
+            tempNumber /= 10;
+        }
+        System.out.println(basNumber);
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

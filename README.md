@@ -426,6 +426,37 @@ public class Java101Practices {
     }
 }
 
+## Elmas Yildiz Pratik
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Bir Sayı Giriniz :");
+        int n = s.nextInt();
+
+        for (int i = 0; i < n/2 ; i++) {
+            for (int j = 0; j < (n - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i + 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+        for (int i = n/2; i >= 0 ; i--) {
+            for (int j = 0; j < (n - i); j++) {
+                System.out.print(" ");
+            }
+            for (int k = (2 * i + 1); k >= 1; k--) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

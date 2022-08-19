@@ -532,6 +532,25 @@ public class Java101Practices {
     }
 }
 
+## Fibonacci Serisi Odev
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Fibonacci serisi terim sayisini giriniz: ");
+        int n = s.nextInt();
+        int f1 = 0,f2 = 1,f3;
+        for(int i=1; i<n;i++){
+            f3 = f1+f2;
+            f1=f2;
+            f2=f3;
+            System.out.print(f3+" ");
+        }
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

@@ -457,6 +457,40 @@ public class Java101Practices {
     }
 }
 
+## Max-Min Pratik
+
+import java.util.Scanner;
+
+public class Java101Practices {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Kac sayi gireceksiniz :");
+        int n = s.nextInt();
+
+
+        int max=0,min=0;
+        for(int i=0; i<n; i++){
+            System.out.print((i+1)+". sayiyi giriniz: ");
+            int k = s.nextInt();
+            if(i==0){
+                max = k;
+                min = k;
+            }
+            else{
+                if(k>max){
+                    max = k;
+                }
+                if(k<min){
+                    min = k;
+                }
+            }
+        }
+        System.out.println("En buyuk sayi= "+max);
+        System.out.println("En kuçuk sayi= "+min);
+    }
+}
+
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

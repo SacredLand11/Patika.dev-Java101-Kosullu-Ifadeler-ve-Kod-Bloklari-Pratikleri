@@ -265,6 +265,31 @@ public class Java101Practices {
         System.out.println(ave/leng);
     }
 }
+
+## Java döngüler ile tek bir sayı girilene kadar kullanıcıdan girişleri kabul eden ve girilen değerlerden çift ve 4'ün katları olan sayıları toplayıp ekrana basan programı yazıyoruz.
+
+import java.util.Scanner;
+
+public class Java101Practices {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int num,evenSum=0;
+        boolean oddNumberCheck = true;
+        for(int i = 0; oddNumberCheck;i++){
+            num = s.nextInt();
+            if(num%4 == 0){
+                evenSum += num;
+            }
+            if(num%2 == 1){
+                System.out.println("Tek sayi girdiniz. Bu zamana kadar girilen 4'un katlari olan sayilarin toplami= "+evenSum);
+                oddNumberCheck = false;
+            }
+        }
+
+    }
+}
+
 # Patika.dev-Java101-Metotlar-Pratikleri
 ## Palindrom Sayilar
 

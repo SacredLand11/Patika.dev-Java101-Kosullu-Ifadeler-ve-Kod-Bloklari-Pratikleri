@@ -909,3 +909,17 @@ public class Java101Practices {
         } while (select != 0);
     }
 }
+# Patika.dev-Java101-Diziler-Pratikleri
+## Dizideki Elemanlarin Harmonik Ortalamasi
+public class Java101Practices {
+
+    public static void main(String[] args) {
+        double[] array = {22, 4, 87, 11, 61, 52};
+        double sum = 0;
+
+        for (double i : array) {
+            sum += 1 / i;
+        }
+        System.out.println(sum);
+    }
+}

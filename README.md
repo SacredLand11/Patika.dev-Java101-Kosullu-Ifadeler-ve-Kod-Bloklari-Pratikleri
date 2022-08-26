@@ -923,3 +923,23 @@ public class Java101Practices {
         System.out.println(sum);
     }
 }
+# Diger Konular
+## Sayi Tahmini Oyunu
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int number = (int) (Math.random() * 100);
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("1-100 arasi sayi girin = ");
+        int right = input.nextInt();
+        if(number == right){
+            System.out.println("Java tahmini = "+number);
+            System.out.println("Senin tahminin = "+right);
+            System.out.println("Tutturdun :)");
+        }
+        else {
+            System.out.println("Java tahmini = " + number);
+            System.out.println("Senin tahminin = " + right);
+            System.out.println("Tutturamadin :(");
+        }
+    }

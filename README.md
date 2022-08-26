@@ -923,6 +923,119 @@ public class Java101Practices {
         System.out.println(sum);
     }
 }
+# Siniflar
+## Boks Oyunu
+class Fighter {
+    String name;
+    int health;
+    int weight;
+    int damage;
+    double dodge;
+    public Fighter(String name, int health, int weight, int damage, double dodge) {
+        this.name = name;
+        this.health = health;
+        this.weight = weight;
+        this.damage = damage;
+        this.dodge = dodge;
+    }
+    public int hit(Fighter fighter) {
+        System.out.println("------------");
+        System.out.println(this.name + " => " + fighter.name + " " +  this.damage + " hasar vurdu.");
+        if (fighter.dodge()) {
+            System.out.println(fighter.name + " gelen hasarý savurdu.");
+            return fighter.health;
+        }
+        if (fighter.health-this.damage <0) {
+            return 0;
+        }
+        return fighter.health-this.damage;
+    }
+    public boolean dodge() {
+        double randomvalue=Math.random()*100;
+        return randomvalue <=this.dodge;
+    }
+}
+class Ring {
+    Fighter f1;
+    Fighter f2;
+    int minWeight;
+    int maxWeight;
+
+    public Ring(Fighter f1, Fighter f2, int minWeight, int maxWeight) {
+        this.f1 = f1;
+        this.f2 = f2;
+        this.minWeight = minWeight;
+        this.maxWeight = maxWeight;
+    }
+    public void run() {
+        if (checkWeight()) {
+            if (yaziTura()) {
+                while (f2.health > 0 && f1.health >0 ) {
+                    f2.health=f1.hit(f2);
+                    if (isWin()) {
+                        break;
+                    }
+                    f1.health=f2.hit(f1);
+                    if (isWin()) {
+                        break;
+                    }
+                    printScore();
+                }
+            }else {
+                while (f2.health > 0 && f1.health >0 ) {
+                    f1.health=f2.hit(f1);
+                    if (isWin()) {
+                        break;
+                    }
+                    f2.health=f1.hit(f2);
+                    if (isWin()) {
+                        break;
+                    }
+                    printScore();
+                }
+            }
+        }else {
+            System.out.println("Sporcularin agirliklari uyusmuyor.");
+        }
+    }
+    public boolean yaziTura() {
+        double sayi =Math.random();
+        return sayi< 0.5;
+    }
+    public boolean checkWeight() {
+        return (f1.weight >= this.minWeight && f1.weight <= this.maxWeight ) && (f2.weight >= this.minWeight && f2.weight <= this.maxWeight );
+    }
+    public boolean isWin() {
+        if (f1.health==0) {
+            System.out.println("Maci Kazanan : " + f2.name);
+            return true;
+        }else if (f2.health==0) {
+            System.out.println("Maci Kazanan : " + f1.name);
+            return true;
+        }
+        return false;
+    }
+    public void printScore() {
+        System.out.println("------------");
+        System.out.println(f1.name + " Kalan Can \t:" + f1.health);
+        System.out.println(f2.name + " Kalan Can \t:" + f2.health);
+    }
+}
+public class Java101Practices {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Oyuncu 1'in ismini girin = ");
+        String name1 = s.next();
+        System.out.print("Oyuncu 2'nin ismini girin = ");
+        String name2 = s.next();
+        Fighter Player1 = new Fighter(name1, 100, 77, 20,35.0);
+        Fighter Player2 = new Fighter(name2, 100, 70, 15,25.0);
+
+        Ring match= new Ring(Player1, Player2, 68, 80);
+        match.run();
+    }
+}
+
 # Diger Konular
 ## Sayi Tahmini Oyunu
     public static void main(String[] args) {

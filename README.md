@@ -1179,7 +1179,27 @@ public class Java101Practices {
         match.run();
     }
 }
-
+# Diziler
+## Dizideki Elemanların Max ve Min Değerlerini Bulan Program
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Listemiz = [15 12 788 1 -1 -778 2 0]");
+        System.out.print("Bir sayi giriniz : ");
+        int inp = scanner.nextInt();
+        scanner.close();
+        System.out.println("Girilen Sayi : " + inp);
+        int[] list = { 15, 12, 788, 1, -1, -778, 2, 0 };
+        int tempMin = inp;
+        int tempMax = inp;
+        Arrays.sort(list);
+        for (int i = 0; i < list.length; i++) {
+            if (inp > list[i] && inp < list[i + 1]) {
+                tempMin = list[i];
+                tempMax = list[i + 1];
+            }
+        }
+        System.out.println("Dizi: " + Arrays.toString(list));
+        System.out.println("Girilen sayiden kucuk en yakin sayi : " + tempMin);
+        System.out.println("Girilen sayiden buyuk en yakin sayi : " + tempMax);
 # Diger Konular
 ## Sayi Tahmini Oyunu
     public static void main(String[] args) {

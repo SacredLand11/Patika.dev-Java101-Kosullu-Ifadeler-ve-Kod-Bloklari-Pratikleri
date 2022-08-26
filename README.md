@@ -1224,6 +1224,23 @@ public class Java101Practices {
         }
     }
 }
+
+## Dizideki Tekrar Eden Cift Sayi
+public class Java101Practices {
+    public static void main(String[] args) {
+        int[] numbers = {5,4,2,8,7,6,5,2,5,6,7};
+        for (int i = 0; i < numbers.length; i++) {
+            if(numbers[i]%2 == 0) {
+                for (int j = i + 1; j < numbers.length; j++) {
+                    if (numbers[i] == numbers[j]) {
+                        System.out.println("Dizide tekrar eden cift sayi = "+numbers[i]);
+                    }
+                }
+            }
+        }
+    }
+}
+
 # Diger Konular
 ## Sayi Tahmini Oyunu
     public static void main(String[] args) {
